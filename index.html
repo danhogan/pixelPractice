@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pixel Practice</title>
+</head>
+<body>
+	<h1>Pixel Practice</h1>
+	<div class="addBlue"></div>
+	<div class="addRed"></div>
+	<canvas id="mainCanvas" width="500" height="300"></canvas>
+	<canvas id="otherCanvas" width="500" height="300"></canvas>
+	<button id="copy">Copy</button>
+	<button id="play">Play</button>
+	<button id="stop">Stop</button>
+</body>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="main.js"></script>
+</html>
+
+
+<style>
+	canvas {
+		border: 1px solid black;
+	}
+	
+	div {
+		height: 50px;
+		width: 50px;
+		float: left;
+		margin: 20px;
+	}
+
+	.addBlue {
+		background-color: blue;
+	}
+
+	.addRed {
+		background-color: red;
+	}	
+</style>
