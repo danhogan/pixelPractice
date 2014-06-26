@@ -36,13 +36,11 @@ $('.addRed').on('click', function(){
 
 $('#copy').on('click', function(){
 	var picData = canvas.getImageData(0,0,c.width,c.height);
-	picData = c.toDataURL(); 
+	// picData = c.toDataURL(); 
 // <-- possible use for storing to DB
 	// image.src = picData;
 	// danvas.drawImage(image, 0, 0, c.width, c.height);
 	
-
-	console.log(picData.data[0]);
 
 	for(var i=0; i <= c.width*c.height; i+=4){
 		// console.log(i);
@@ -65,7 +63,7 @@ var osc = sound.createOscillator();
 
 $('#play').on('click', function(){
 	osc.frequency.value = 440;
-	osc.type = "sawtooth";
+	osc.type = "square";
 	osc.connect(sound.destination);
 	osc.start(0);
 });
@@ -74,6 +72,17 @@ $('#stop').on('click', function(){
 	osc.stop();
 });
 
+
+
+//Audiosynth Stuff
+//Synth.generate(sound, note, octave, duration);
+
+var piano = Synth.createInstrument('piano');
+
+
+$('#magic').on('click', function(){
+	piano.play('C', 4, 2);
+});
 
 
 //**********
